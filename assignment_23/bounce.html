@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+       
+       box-shadow: 0px 0px 10px;
+       margin: 100px;
+       padding: 0px;
+      }
+      h1{
+        text-shadow: 0px 0px 3px;
+        animation-name: body;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      @keyframes body{
+        from{
+          transform: translateX(0px);
+        }
+        to{
+          transform: translateX(730px);
+        }
+      }
+        .main{
+            padding-left: 50%;
+            margin-top: 140px;
+            margin-left: -50px;
+            
+            
+        }
+        #ball1,#ball2,#ball3{
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display:inline-block;
+            position: relative;
+            margin-left: 10px;
+            animation-name:bounce ;
+            animation-duration:4s;
+            animation-iteration-count: infinite;
+            margin-top: 200px; 
+        }
+        #ball1{
+            animation-delay: 0s;
+            background-color: orange;
+            box-shadow: 0px 0px 20px orange;
+        }
+        #ball2{
+            animation-delay: 0.5s;
+            background-color: rgb(234, 49, 49);
+            box-shadow: 0px 0px 20px red;
+        }
+        #ball3{
+            animation-delay: 1s;
+            background-color: green;
+            box-shadow: 0px 0px 20px green;
+        }
+        @keyframes bounce{
+            0%{
+                transform: translatey(0px);
+            }
+            25%{
+                transform: translatey(-100px);
+            }
+            50%{
+                transform:translatey(0px) ;
+            }
+            75%{
+                transform:translatey(-100px) ;
+            }
+        }
+        .main2{
+            padding-left: 50%;
+            margin-top: 50px;
+            margin-left: -90px;
+            
+        }
+        #ball4,#ball5,#ball6{
+            border-radius: 50%;
+            background-color:rgb(178, 221, 168);
+            width: 10px;
+            height: 10px;
+            display:inline-block;
+            margin-left: 9px;
+            position: relative;
+            animation-iteration-count: infinite;
+            animation-duration: 3s;
+            z-index: 2;
+            top: 30px;
+            left: 70px;
+        }
+  #ball4{
+    animation-name:zoom ;
+    animation-delay: 0.5s;
+  }
+  #ball5{
+    animation-name:zoom ;
+    animation-delay: 1s;
+  }
+  #ball6{
+    animation-name:zoom ;
+    animation-delay: 1.5s;
+  }
+
+  @keyframes zoom{
+    0%{
+    transform: scale(1);
+    }
+    50%{
+    transform: scale(2);
+    background-color: rgb(99, 218, 99);
+    }
+    100%{
+    transform: scale(1);
+    }
+  }
+  
+  #load{
+    font-size: 20px;
+    font-weight:600;
+    color:black;
+    padding-left: 50%;
+            margin-top: 10px;
+            margin-left: -20px;
+            
+  }
+    </style>
+</head>
+<body>
+  <h1><i><b>BOUNCING BALLS</b></i></h1>
+ <div class="main">
+    <div id="ball1"></div>
+    <div id="ball2"></div>
+    <div id="ball3"></div>
+</div>
+
+<div class="main2">
+    <div id="ball4"></div>
+    <div id="ball5"></div>
+    <div id="ball6"></div>
+</div><br><br>
+<b id="load">Loading.....</b>
+
+</body>
+</html>
